@@ -23,7 +23,7 @@ pipeline {
     stage ('deploying to prod environment'){
       steps {
         sshagent(['ansible-key']) {
-          sh 'ssh -t -t ubuntu@15.237.81.115 -o StrictHostKeyChecking=no "ansible-playbook /home/ubuntu/playbook/prod.yml"'
+          sh 'ssh -t -t ubuntu@15.237.81.115 -o StrictHostKeyChecking=no "ansible-playbook /home/ubuntu/playbook/prod.yaml"'
         }
       }
     }
